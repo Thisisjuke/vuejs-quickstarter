@@ -1,0 +1,12 @@
+version: "3.4"
+
+services:
+  client:
+    build: '.'
+    volumes:
+      - '.:/home/node/app'
+    working_dir: '/home/node/app'
+    command: yarn serve
+    ports:
+      - 8000:8000
+      - 8080:8080
